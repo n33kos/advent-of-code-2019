@@ -1,0 +1,37 @@
+{
+  "name": "advent-of-code-2019",
+  "version": "1.0.0",
+  "description": "Functions written for participation in advent of code 2019",
+  "main": "",
+  "scripts": {
+    "dev": "npm-watch",
+    "test": "jest ./src"
+  },
+  "watch": {
+    "test": "./src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n33kos/advent-of-code-2019.git"
+  },
+  "keywords": [
+    "advent",
+    "code",
+    "2019"
+  ],
+  "author": "n33kos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n33kos/advent-of-code-2019/issues"
+  },
+  "homepage": "https://github.com/n33kos/advent-of-code-2019#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "npm-watch": "^0.6.0"
+  }
+}
