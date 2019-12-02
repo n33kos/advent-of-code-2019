@@ -1,11 +1,11 @@
-import { fuelRequirementsSimple, fuelRequirements, fuelForModule, fuelForModuleRecursive } from './fuelRequirements';
+import { fuelRequirementsSimple, fuelRequirements, fuelForMass, fuelForModule } from './fuelRequirements';
 
 describe('Fuel Requirements', () => {
   it('calculates the example values for each module correctly', () => {
-    expect(fuelForModule(12)).toEqual(2);
-    expect(fuelForModule(14)).toEqual(2);
-    expect(fuelForModule(1969)).toEqual(654);
-    expect(fuelForModule(100756)).toEqual(33583);
+    expect(fuelForMass(12)).toEqual(2);
+    expect(fuelForMass(14)).toEqual(2);
+    expect(fuelForMass(1969)).toEqual(654);
+    expect(fuelForMass(100756)).toEqual(33583);
   });
   
   it('adds the given module values correctly', () => {
@@ -22,9 +22,9 @@ describe('Fuel Requirements', () => {
   });
 
   it('calculates its own fuel requirements recursively', () => {
-    expect(fuelForModuleRecursive(14)).toEqual(2);
-    expect(fuelForModuleRecursive(1969)).toEqual(966);
-    expect(fuelForModuleRecursive(100756)).toEqual(50346);
+    expect(fuelForModule(14)).toEqual(2);
+    expect(fuelForModule(1969)).toEqual(966);
+    expect(fuelForModule(100756)).toEqual(50346);
   });
 });
 

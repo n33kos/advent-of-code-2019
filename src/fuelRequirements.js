@@ -1,14 +1,14 @@
-export const fuelForModule = (mass) => {
+export const fuelForMass = (mass) => {
   return Math.max(Math.floor(mass / 3) - 2, 0);
 }
   
-export const fuelForModuleRecursive = (mass) => {
+export const fuelForModule = (mass) => {
   let total = 0;
-  let fuelForMass = mass;
+  let massToCalculate = mass;
   
-  while (fuelForMass > 0) {
-    fuelForMass = fuelForModule(fuelForMass);
-    total += fuelForMass
+  while (massToCalculate > 0) {
+    massToCalculate = fuelForMass(massToCalculate);
+    total += massToCalculate;
   }
 
   return total;
@@ -16,18 +16,12 @@ export const fuelForModuleRecursive = (mass) => {
 
 export const fuelRequirementsSimple = (modules) => {
   return modules.reduce(
-    (acc, curr) => {
-
-      return acc + fuelForModule(curr)
-    }, 0
+    (acc, curr) => acc + fuelForMass(curr), 0
   );
 }
 
 export const fuelRequirements = (modules) => {
   return modules.reduce(
-    (acc, curr) => {
-
-      return acc + fuelForModuleRecursive(curr)
-    }, 0
+    (acc, curr) => acc + fuelForModule(curr), 0
   );
 }
