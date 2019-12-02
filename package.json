@@ -2,13 +2,16 @@
   "name": "advent-of-code-2019",
   "version": "1.0.0",
   "description": "Functions written for participation in advent of code 2019",
-  "main": "",
+  "main": "./dist/index.js",
   "scripts": {
+    "answer": "node ./dist/index.js",
+    "build": "babel ./src -d ./dist",
     "dev": "npm-watch",
-    "test": "jest ./src"
+    "test": "jest ./src",
+    "watch": "npm run build && npm run test && npm run answer"
   },
   "watch": {
-    "test": "./src/*.js"
+    "watch": "./src/*.js"
   },
   "repository": {
     "type": "git",
