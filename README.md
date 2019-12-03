@@ -8,5 +8,7 @@ Functions written for participation [Advent of Code 2019](https://adventofcode.c
 ### Days
 - Day 1
   - [Fuel Requirements](https://github.com/n33kos/advent-of-code-2019/blob/master/src/fuelRequirements.js)
+- Day 2
+  - [Int Code](https://github.com/n33kos/advent-of-code-2019/blob/master/src/intCode.js)
 
   
